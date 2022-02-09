@@ -3,7 +3,7 @@
 
 
 
-![Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/100px-GraphQL_Logo.svg.png) 
+![Logo](https://miro.medium.com/max/1113/0*loSIRtkR2chDWcAR.png) 
 
 GraphQL Full Stack is a project demonstrating how we can query and mutate data on a server using graphql queries from the front-end side (REACT) and also replacing traditional REST API endpoints with GraphQL based server side endpoints (NODEJS AND EXPRESSJS)
 
