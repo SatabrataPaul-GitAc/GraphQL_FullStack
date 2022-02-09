@@ -3,7 +3,7 @@
 
 
 
-![Logo](https://symbols.getvecta.com/stencil_82/66_graphql-icon.cdedad214a.svg)
+![Logo](https://symbols.getvecta.com/stencil_66/66_graphql-icon.cdedad214a.svg)
 ![Logo](https://symbols.getvecta.com/stencil_89/66_nodejs-icon.40ac81e939.svg)
 ![Logo](https://symbols.getvecta.com/stencil_79/66_expressjs-icon.54bb6035d3.svg)
 ![Logo](https://symbols.getvecta.com/stencil_88/66_mongodb-icon.50ec4bab66.svg)
