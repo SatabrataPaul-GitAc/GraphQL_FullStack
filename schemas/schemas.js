@@ -6,6 +6,10 @@ const GraphQLInt = graphql.GraphQLInt;
 const GraphQLList = graphql.GraphQLList;
 const GraphQLSchema = graphql.GraphQLSchema;
 
+//Importing mongoose models 
+const bookModel = require("../models/booksModel");
+const authorModel = require("../models/authorsModel");
+
 //Dummy books data
 var books_data = [
     {name: "Death on the Nile", genre: "Murder mystery", id: "1", author_id: "2"},
@@ -112,6 +116,28 @@ const RootQuery = new GraphQLObjectType({
 });
 
 
+const Mutation = new GraphQLObjectType({
+    name: "Mutation",
+    fields: {
+        addAuthor: {
+            type: AuthorType,
+            args: {
+                name: {type: GraphQLString},
+                age: {type: GraphQLInt}
+            },
+            resolve(parent,args){
+                const newAuthor = new authorModel({
+                    name: args.name,
+                    age: args.age
+                });
+
+                return newAuthor.save();
+            }
+        }
+    }
+});
+
 module.exports = new GraphQLSchema({
-    query: RootQuery
+    query: RootQuery,
+    mutation: Mutation
 });
