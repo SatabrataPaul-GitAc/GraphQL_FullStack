@@ -26,7 +26,7 @@ GraphQL Full Stack is a project demonstrating how we can query and mutate data o
 ### Go to the project directory
 
 ```bash
-  cd GraphQL_FullStack/server
+  cd GraphQL_FullStack
 ```
 
 ### Install dependencies
