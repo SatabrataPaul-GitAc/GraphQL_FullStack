@@ -8,6 +8,8 @@ GraphQL             |  NodeJS  |  ExpressJS | MongoDB
 
 GraphQL Full Stack is a project demonstrating how we can query and mutate data on a server using graphql queries from the front-end side (REACT) and also replacing traditional REST API endpoints with GraphQL based server side endpoints (NODEJS AND EXPRESSJS)
 
+## IN PROGRESS
+
 ## Tech Stack
 
 **Client:**  ***Reactjs***, ***Apollo-Server***
@@ -26,7 +28,7 @@ GraphQL Full Stack is a project demonstrating how we can query and mutate data o
 ### Go to the project directory
 
 ```bash
-  cd GraphQL_FullStack/server
+  cd GraphQL_FullStack
 ```
 
 ### Install dependencies
