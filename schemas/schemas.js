@@ -10,31 +10,7 @@ const GraphQLSchema = graphql.GraphQLSchema;
 const bookModel = require("../models/booksModel");
 const authorModel = require("../models/authorsModel");
 
-//Dummy books data
-var books_data = [
-    {name: "Death on the Nile", genre: "Murder mystery", id: "1", author_id: "2"},
-    {name: "Sherlock Holmes", genre: "Detective", id: "2", author_id: "3"},
-    {name: "Northanger Abbey", genre: "Gothic Fiction", id: "3", author_id: "4"},
-    {name: "War and Peace", genre: "War", id: "4", author_id: "5"},
-    {name: "Anna Karenina", genre: "Fiction", id: "5", author_id: "5"},
-    {name: "Hamlet, Prince of Denmark", genre: "Tragedy", id: "6", author_id: "6"},
-    {name: "The Hero of the Ages", genre: "Fantasy", id: "8",author_id: "7"},
-    {name: "The colour of magic", genre: "Fantasy", id: "9", author_id: "8"},
-    {name: "The Light of Fantastic", genre: "Fantasy", id: "9", author_id: "8"}
-    
-]
 
-//Dummy Authors data
-var authors_data = [
-    {name: "Paulo Coelho",id: "1",age: 56},
-    {name: "Agatha Christie",id: "2",age: 45},
-    {name: "Sir Arthur Canandoyle",id: "3",age: 84},
-    {name: "Austen Jane",id: "4", age: 56},
-    {name: "Tolstoy Leo",id: "5",age: 66},
-    {name: "Wiiliam Shakespeare",id: "6",age: 100},
-    {name: "Brandon Sanderson",id: "7",age: 55},
-    {name: "Terry Pratchet",id: "8",age: 75}
-]
 
 const BookType = new GraphQLObjectType({
     name: "Book",
