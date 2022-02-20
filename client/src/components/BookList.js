@@ -1,14 +1,5 @@
-import {enableExperimentalFragmentVariables, gql,useQuery} from "@apollo/client";
-
-const getBooksQuery = gql`
-{
-    books{
-        id
-        name
-        genre
-    }
-}
-`
+import {useQuery} from "@apollo/client";
+import {getBooksQuery} from "../queries/queries";
 
 function DisplayBooks(){
     const {data,loading} = useQuery(getBooksQuery);
