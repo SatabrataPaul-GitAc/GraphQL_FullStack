@@ -1,6 +1,7 @@
-import { useQuery } from "@apollo/client";
+import { useQuery,useMutation } from "@apollo/client";
 import { useReducer} from "react";
-import { getAuthorsQuery } from "../queries/queries";
+import { getAuthorsQuery,addBookMutation } from "../queries/queries";
+
 
 const initialstate = {
     name: "",
@@ -42,10 +43,6 @@ const authorid = (e)=>{
     )
 }
 
-function submitForm(e){
-    e.preventDefault();
-    console.log(initialstate);
-}
 
 function GetAuthors(){
     const {data,loading} = useQuery(getAuthorsQuery);
@@ -65,9 +62,24 @@ function GetAuthors(){
 function AddBook(){
 
     const [state,dispatch] = useReducer(reducer, initialstate);
+    const [addBook,{data,loading}] = useMutation(addBookMutation);
 
+    
     return (
-        <form id="add-book" onSubmit={(e)=>submitForm(e)}>
+        <form id="add-book" onSubmit={(e)=>{
+            e.preventDefault();
+            console.log(initialstate);
+            addBook({
+                variables: {
+                    name: initialstate.name,
+                    genre: initialstate.genre,
+                    author_id: initialstate.authorid
+                }
+            }).then((result)=>{
+                console.log("Book Added Successfully");
+                console.log(result.data);
+            })
+        }}>
             <div className="field">
                 <label>BookName : </label>
                 <input type="text" onChange={(e)=>{dispatch(bookName(e))}}></input>
@@ -82,11 +94,11 @@ function AddBook(){
                 <label>Author : </label>
                 <select onChange={(e)=>{dispatch(authorid(e))}}>
                     <option>Select Author</option>
-                    {GetAuthors()}
+                    <GetAuthors/>
                 </select>
             </div>
 
-            <button>+</button>
+            <button type="submit">+</button>
         </form>
     )
 }
