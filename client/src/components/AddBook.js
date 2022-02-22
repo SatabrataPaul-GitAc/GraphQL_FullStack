@@ -1,6 +1,6 @@
 import { useQuery,useMutation } from "@apollo/client";
 import { useReducer} from "react";
-import { getAuthorsQuery,addBookMutation } from "../queries/queries";
+import { getAuthorsQuery,addBookMutation,getBooksQuery } from "../queries/queries";
 
 
 const initialstate = {
@@ -74,10 +74,10 @@ function AddBook(){
                     name: initialstate.name,
                     genre: initialstate.genre,
                     author_id: initialstate.authorid
-                }
+                },
+                refetchQueries: [getBooksQuery]
             }).then((result)=>{
-                console.log("Book Added Successfully");
-                console.log(result.data);
+                console.log("Book Added Successfully...")
             })
         }}>
             <div className="field">
