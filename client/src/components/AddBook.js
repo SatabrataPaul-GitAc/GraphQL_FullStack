@@ -94,7 +94,7 @@ function AddBook(){
                 <label>Author : </label>
                 <select onChange={(e)=>{dispatch(authorid(e))}}>
                     <option>Select Author</option>
-                    <GetAuthors/>
+                    {GetAuthors()}
                 </select>
             </div>
 
