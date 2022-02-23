@@ -28,6 +28,10 @@ query($id: ID!){
         author{
             name
             age
+            books{
+                name
+                id
+            }
         }
     }
 }`
