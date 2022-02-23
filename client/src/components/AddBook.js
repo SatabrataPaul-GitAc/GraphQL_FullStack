@@ -81,17 +81,17 @@ function AddBook(){
             })
         }}>
             <div className="field">
-                <label>BookName : </label>
+                <label><b>BookName : </b></label>
                 <input type="text" onChange={(e)=>{dispatch(bookName(e))}}></input>
             </div>
 
             <div className="field">
-                <label>Genre : </label>
+                <label><b>Genre : </b></label>
                 <input type="text" onChange={(e)=>{dispatch(genre(e))}}/>
             </div>
 
             <div className="field">
-                <label>Author : </label>
+                <label><b>Author : </b></label>
                 <select onChange={(e)=>{dispatch(authorid(e))}}>
                     <option>Select Author</option>
                     {GetAuthors()}
