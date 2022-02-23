@@ -14,7 +14,7 @@ function DisplayBooks(){
         return (
             <div>
                 {data.books.map((book)=>{
-                    return <li key={book.id} onClick={(e)=>{
+                    return <li className="books" key={book.id} onClick={(e)=>{
                         setState(book.id);
                     }}>{book.name}</li>
                 })}
