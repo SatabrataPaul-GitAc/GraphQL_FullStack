@@ -12,7 +12,7 @@ GraphQL Full Stack is a project demonstrating how we can query and mutate data o
 
 ## Tech Stack
 
-**Client:**  ***Reactjs***, ***Apollo-Server***
+**Client:**  ***ReactJS***, ***Apollo-Server***
 
 **Server:**  ***NodeJS***, ***ExpressJS***, ***MongoDB***, ***GraphQL***
 
