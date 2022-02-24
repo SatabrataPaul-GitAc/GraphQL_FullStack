@@ -8,11 +8,11 @@ function BookDetails(props){
         }
     });
 
-    if(loading===true) return <p>Loading Book Details...</p>
+    if(loading===true) return <div className="book-details">Loading Book Details...</div>
     else if(loading===false){
         if(data!==undefined){
             return (
-                <div>
+                <div className="book-details">
                     <h2>BookName : {data.book.name}</h2>
                     <p>Genre: {data.book.genre}</p>
                     <p>Author: {data.book.author.name}</p>
@@ -28,7 +28,7 @@ function BookDetails(props){
             )
         }
         else{
-            return <p>No Book Selected...</p>
+            return <p className="book-details">No Book Selected...</p>
         }
     }
 }
